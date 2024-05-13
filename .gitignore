@@ -1,0 +1,45 @@
+# Ignorer les fichiers de log HTTP
+*.log
+*.log.gz
+
+# Ignorer les fichiers HTML spécifiques
+http.html
+
+# Ignorer les notebooks spécifiques d'analyse HTTP
+http analysis.ipynb
+
+*http.log*
+1-Quick-win/http.log
+1-Quick-win/http.log.gz
+Apprentissage statistique/data_dm3.csv
+Apprentissage statistique/Practical_session_2_solution.ipynb
+Apprentissage statistique/Practical_session_3_solution.ipynb.html
+Apprentissage statistique/spotifynum.csv
+Apprentissage statistique/TP1_solution_commented.ipynb
+Deep Learning/solution_2-1.ipynb.txt
+Deep Learning/solution_2-2.ipynb.txt
+Deep Learning/solution_4_2_noun_verb.ipynb.txt
+Deep Learning/solution_cGANs.ipynb.txt
+Deep Learning/solution_GANs.ipynb.txt
+Deep Learning/solution-4-1-human_activity_recognition.ipynb.txt
+Deep Learning/solution-5-1-Attention.ipynb.txt
+Deep Learning/solution-5-2-Pretrained.ipynb.txt
+Deep Learning/solution1-2.ipynb
+1-Quick-win/http_100k.log
+1-Quick-win/1.1-exploration.ipynb
+Deep Learning/solution_2-1.ipynb
+Deep Learning/solution_2-2.ipynb
+Deep Learning/solution_4_2_noun_verb.ipynb
+Deep Learning/solution_cGANs.ipynb
+Deep Learning/solution_GANs.ipynb
+Deep Learning/solution-4-1-human_activity_recognition.ipynb
+Deep Learning/solution-5-1-Attention.ipynb
+Deep Learning/solution-5-2-Pretrained.ipynb
+1-Quick-win/maccdc2010_00000_20100310205651.pcap
+DATASETS/maccdc2010_00000_20100310205651.pcap.gz
+1-Quick-win/Good_Bad_queries/goodqueries.txt
+1-Quick-win/Good_Bad_queries/badqueries.txt
+1-Quick-win/machine_learning_security/dataset/kddcup.data_small.csv
+1-Quick-win/Good_Bad_queries/my_lstm_model.h5
+1-Quick-win/my_lstm_model.h5
+**/*.keras
