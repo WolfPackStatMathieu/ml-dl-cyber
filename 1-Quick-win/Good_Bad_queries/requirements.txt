@@ -1,1 +1,6 @@
 tensorflow
+pandas
+scikit-learn
+torch
+seaborn
+matplotlib
