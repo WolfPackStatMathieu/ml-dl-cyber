@@ -3,7 +3,7 @@ import pandas as pd
 import re
 
 # Path to the JSON file
-file_path = '1716554847_127206(1).json'
+file_path = '1716554847_127206.json'
 
 # Read the file line by line and parse each JSON object
 data = []
