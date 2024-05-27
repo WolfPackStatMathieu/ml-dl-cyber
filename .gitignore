@@ -41,3 +41,6 @@ DATASETS/maccdc2010_00000_20100310205651.pcap.gz
 1-Quick-win/Good_Bad_queries/my_lstm_model.h5
 1-Quick-win/my_lstm_model.h5
 **/*.keras
+Splunk/1716794372_291602.json
+1-Quick-win/Good_Bad_queries/predicted_final_results_dataset.csv
+1-Quick-win/Good_Bad_queries/final_results_dataset.csv
