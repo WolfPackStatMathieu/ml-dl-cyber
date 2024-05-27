@@ -8,7 +8,7 @@ http.html
 # Ignorer les notebooks spécifiques d'analyse HTTP
 http analysis.ipynb
 
-badqueries.txt
+bad_query_urls
 
 *http.log*
 1-Quick-win/http.log
