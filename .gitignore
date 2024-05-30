@@ -5,6 +5,8 @@
 # Ignorer les fichiers HTML spécifiques
 http.html
 
+mc_slides_v0.pptx
+
 # Ignorer les notebooks spécifiques d'analyse HTTP
 http analysis.ipynb
 
