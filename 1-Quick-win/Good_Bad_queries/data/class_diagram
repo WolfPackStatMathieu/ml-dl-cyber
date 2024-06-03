@@ -1,0 +1,52 @@
+// Diagramme de classes UML pour le projet MLflow
+digraph {
+	A [label="train.py"]
+	B [label="class Preprocessor"]
+	C [label="clean_text()"]
+	D [label="class FastTextWrapper"]
+	E [label="load_context()"]
+	F [label="predict()"]
+	G [label="utils.py"]
+	H [label="get_root_path()"]
+	I [label="write_training_data()"]
+	J [label="constants.py"]
+	K [label=TEXT_FEATURE]
+	L [label=Y]
+	M [label=DATA_PATH]
+	N [label=LABEL_PREFIX]
+	A -> B
+	B -> C
+	A -> D
+	D -> E
+	D -> F
+	A -> G
+	G -> H
+	G -> I
+	A -> J
+	J -> K
+	J -> L
+	J -> M
+	J -> N
+	B [label="class Preprocessor {
+  +tuple stopwords
+  +SnowballStemmer stemmer
+  +pd.DataFrame clean_text(df: pd.DataFrame, text_feature: str)
+}" shape=record]
+	D [label="class FastTextWrapper {
+  +Any model
+  +Preprocessor preprocessor
+  +void load_context(context: mlflow.pyfunc.PythonModelContext)
+  +Tuple predict(context: mlflow.pyfunc.PythonModelContext, model_input: List, params: Optional[Dict[str, Any]] = None)
+  +str _format_item(row: pd.Series)
+}" shape=record]
+	G [label="utils.py {
+  +Path get_root_path()
+  +str write_training_data(df, params)
+}" shape=record]
+	J [label="constants.py {
+  +str TEXT_FEATURE
+  +str Y
+  +str DATA_PATH
+  +str LABEL_PREFIX
+}" shape=record]
+}

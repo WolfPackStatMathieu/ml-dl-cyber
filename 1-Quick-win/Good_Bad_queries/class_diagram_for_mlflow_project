@@ -1,0 +1,47 @@
+digraph "Class Diagram for MLflow Project" {
+	graph [fontcolor="#2D3436" fontname="Sans-Serif" fontsize=15 label="Class Diagram for MLflow Project" nodesep=0.60 pad=2.0 rankdir=LR ranksep=0.75 splines=ortho]
+	node [fixedsize=true fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13 height=1.4 imagescale=true labelloc=b shape=box style=rounded width=1.4]
+	edge [color="#7B8894"]
+	subgraph "cluster_train.py" {
+		graph [bgcolor="#E5F5FD" fontname="Sans-Serif" fontsize=12 label="train.py" labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+		"284ebb403c154acab80234135b6a78ac" [label="train.py" height=1.9 image="/opt/mamba/lib/python3.12/site-packages/resources/aws/general/user.png" shape=none]
+		subgraph cluster_Preprocessor {
+			graph [bgcolor="#EBF3E7" fontname="Sans-Serif" fontsize=12 label=Preprocessor labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+			"6f16b42c786c4a2dbf6f3d85f5cbc4e5" [label=Preprocessor height=1.9 image="/opt/mamba/lib/python3.12/site-packages/resources/aws/compute/ec2.png" shape=none]
+			"49b0601093ac4ec487fda4d49acb82b6" [label="clean_text()" height=1.9 image="/opt/mamba/lib/python3.12/site-packages/resources/aws/database/rds.png" shape=none]
+		}
+		subgraph cluster_FastTextWrapper {
+			graph [bgcolor="#EBF3E7" fontname="Sans-Serif" fontsize=12 label=FastTextWrapper labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+			b7e3126d5368489ca096cc1e590750d9 [label=FastTextWrapper height=1.9 image="/opt/mamba/lib/python3.12/site-packages/resources/aws/compute/ec2.png" shape=none]
+			"4f251d0fee8246008c6eb88e575666fd" [label="load_context()" height=1.9 image="/opt/mamba/lib/python3.12/site-packages/resources/aws/database/rds.png" shape=none]
+			"4612ff39eac84d97a40297e450d32276" [label="predict()" height=1.9 image="/opt/mamba/lib/python3.12/site-packages/resources/aws/database/rds.png" shape=none]
+		}
+		subgraph "cluster_utils.py" {
+			graph [bgcolor="#EBF3E7" fontname="Sans-Serif" fontsize=12 label="utils.py" labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+			f1e0bf6f8560402a9355bf1245f3e241 [label="utils.py" height=1.9 image="/opt/mamba/lib/python3.12/site-packages/resources/aws/compute/ec2.png" shape=none]
+			"507a9c3d9f0a4e888392cc728388cb47" [label="get_root_path()" height=1.9 image="/opt/mamba/lib/python3.12/site-packages/resources/aws/database/rds.png" shape=none]
+			a99aa79c30584ef28242b9f9df70e9d1 [label="write_training_data()" height=1.9 image="/opt/mamba/lib/python3.12/site-packages/resources/aws/database/rds.png" shape=none]
+		}
+		subgraph "cluster_constants.py" {
+			graph [bgcolor="#EBF3E7" fontname="Sans-Serif" fontsize=12 label="constants.py" labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+			cc7022b3324c4d2fa60ccbe492c62a96 [label="constants.py" height=1.9 image="/opt/mamba/lib/python3.12/site-packages/resources/aws/compute/ec2.png" shape=none]
+			d94db509c04147e79dbca752964788cf [label=TEXT_FEATURE height=1.9 image="/opt/mamba/lib/python3.12/site-packages/resources/aws/database/rds.png" shape=none]
+			"43870e8dbf5b4c29a53f76d4dd5dfc01" [label=Y height=1.9 image="/opt/mamba/lib/python3.12/site-packages/resources/aws/database/rds.png" shape=none]
+			f0e49ab36a1a4030823ba5dc62e25108 [label=DATA_PATH height=1.9 image="/opt/mamba/lib/python3.12/site-packages/resources/aws/database/rds.png" shape=none]
+			"10ee257e42b4411e8761dc8c88088498" [label=LABEL_PREFIX height=1.9 image="/opt/mamba/lib/python3.12/site-packages/resources/aws/database/rds.png" shape=none]
+		}
+	}
+	"284ebb403c154acab80234135b6a78ac" -> "6f16b42c786c4a2dbf6f3d85f5cbc4e5" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"6f16b42c786c4a2dbf6f3d85f5cbc4e5" -> "49b0601093ac4ec487fda4d49acb82b6" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"284ebb403c154acab80234135b6a78ac" -> b7e3126d5368489ca096cc1e590750d9 [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	b7e3126d5368489ca096cc1e590750d9 -> "4f251d0fee8246008c6eb88e575666fd" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	b7e3126d5368489ca096cc1e590750d9 -> "4612ff39eac84d97a40297e450d32276" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"284ebb403c154acab80234135b6a78ac" -> f1e0bf6f8560402a9355bf1245f3e241 [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	f1e0bf6f8560402a9355bf1245f3e241 -> "507a9c3d9f0a4e888392cc728388cb47" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	f1e0bf6f8560402a9355bf1245f3e241 -> a99aa79c30584ef28242b9f9df70e9d1 [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	"284ebb403c154acab80234135b6a78ac" -> cc7022b3324c4d2fa60ccbe492c62a96 [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	cc7022b3324c4d2fa60ccbe492c62a96 -> d94db509c04147e79dbca752964788cf [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	cc7022b3324c4d2fa60ccbe492c62a96 -> "43870e8dbf5b4c29a53f76d4dd5dfc01" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	cc7022b3324c4d2fa60ccbe492c62a96 -> f0e49ab36a1a4030823ba5dc62e25108 [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+	cc7022b3324c4d2fa60ccbe492c62a96 -> "10ee257e42b4411e8761dc8c88088498" [dir=forward fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13]
+}
